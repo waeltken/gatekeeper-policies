@@ -10,29 +10,29 @@ resource "azurerm_policy_definition" "defaultallowprivilegeescalationephemeral" 
   description  = "Mutates the Pod Security Policy disabling privilege on ephemeral containers escalation by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/default-allow-privilege-escalation-ephemeral.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/default-allow-privilege-escalation-ephemeral.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -44,29 +44,29 @@ resource "azurerm_policy_definition" "defaultallowprivilegeescalationinit" {
   description  = "Mutates the Pod Security Policy disabling privilege escalation on init containers by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/default-allow-privilege-escalation-init.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/default-allow-privilege-escalation-init.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -78,29 +78,29 @@ resource "azurerm_policy_definition" "defaultallowprivilegeescalation" {
   description  = "Mutates the Pod Security Policy disabling privilege escalation by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/default-allow-privilege-escalation.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/default-allow-privilege-escalation.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -112,29 +112,29 @@ resource "azurerm_policy_definition" "fsGroup" {
   description  = "Mutates the Pod Security Policy setting fsGroup to 3000 by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/fsGroup.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/fsGroup.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -146,29 +146,29 @@ resource "azurerm_policy_definition" "readonlyrootfs" {
   description  = "Mutates the Pod Security Policy to enforce read only root filesystems by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/read-only-root-fs.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/read-only-root-fs.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -180,29 +180,29 @@ resource "azurerm_policy_definition" "runasgroupinit" {
   description  = "Mutates the Pod Security Policy setting runAsGroup on init containers to 3000 by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-group-init.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-group-init.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -214,29 +214,29 @@ resource "azurerm_policy_definition" "runasgroup" {
   description  = "Mutates the Pod Security Policy setting runAsGroup to 3000 by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-group.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-group.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -248,29 +248,29 @@ resource "azurerm_policy_definition" "runasnonrootinit" {
   description  = "Mutates the Pod Security Policy setting runAsNonRoot on init containers to true by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-non-root-init.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-non-root-init.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -282,29 +282,29 @@ resource "azurerm_policy_definition" "runasnonroot" {
   description  = "Mutates the Pod Security Policy setting runAsNonRoot to true by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-non-root.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-non-root.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -316,29 +316,29 @@ resource "azurerm_policy_definition" "runasuserinit" {
   description  = "Mutates the Pod Security Policy setting runAsUser on init containers to 3000 by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-user-init.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-user-init.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
@@ -350,29 +350,29 @@ resource "azurerm_policy_definition" "runasuser" {
   description  = "Mutates the Pod Security Policy setting runAsUser to 3000 by default."
 
   metadata = <<METADATA
-	{
-		"category": "Kubernetes"
-	}
+  {
+    "category": "Kubernetes"
+  }
 METADATA
 
   policy_rule = <<POLICY_RULE
-	{
-		"if": {
-			"field": "type",
-			"in": [
-				"Microsoft.ContainerService/managedClusters"
-			]
-		},
-		"then": {
-			"effect": "mutate",
-			"details": {
-				"mutationInfo": {
-					"sourceType": "PublicURL",
-					"url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-user.yaml"
-				}
-			}
-		}
-	}
+  {
+    "if": {
+      "field": "type",
+      "in": [
+        "Microsoft.ContainerService/managedClusters"
+      ]
+    },
+    "then": {
+      "effect": "mutate",
+      "details": {
+        "mutationInfo": {
+          "sourceType": "PublicURL",
+          "url": "https://raw.githubusercontent.com/waeltken/gatekeeper-policies/main/policies/run-as-user.yaml"
+        }
+      }
+    }
+  }
 POLICY_RULE
 }
 
